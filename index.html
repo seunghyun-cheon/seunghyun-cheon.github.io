@@ -70,17 +70,16 @@
     }
 
     .brand {
-      font-size: 22px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: var(--main);
-    }
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
 
-    .brand span {
-      font-weight: 400;
-      color: var(--text);
-    }
-
+.brand img {
+  height: 52px;
+  width: auto;
+  display: block;
+}
     .menu a {
       margin-left: 28px;
       text-decoration: none;
@@ -700,9 +699,9 @@
 
   <div class="nav">
 
-    <div class="brand">
-      PRECISE <span>Lab</span>
-    </div>
+    <a href="#" class="brand">
+  <img src="./images/precise-logo.png" alt="PRECISE Lab">
+</a>
 
     <nav class="menu">
       <a href="#about">About</a>
