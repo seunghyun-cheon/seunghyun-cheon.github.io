@@ -1,20 +1,711 @@
-<p>
-        Pharmacotherapy & Real-world Evidence for Clinical Safety & Efficacy Lab
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PRECISE Lab | Gyeongsang National University</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e5e5e5;
+      z-index: 1000;
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 30px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #2f5d50;
+    }
+
+    nav a {
+      margin-left: 28px;
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #2f5d50;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 30px;
+      background:
+        linear-gradient(
+          rgba(255,255,255,0.90),
+          rgba(255,255,255,0.90)
+        );
+    }
+
+    .hero-content {
+      max-width: 950px;
+    }
+
+    .hero h1 {
+      font-size: 64px;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      color: #1e3d35;
+    }
+
+    .hero .subtitle {
+      font-size: 24px;
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    .hero .full-name {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .hero .institution {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .hero-buttons {
+      margin-top: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 6px;
+      padding: 11px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #2f5d50;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #244a40;
+    }
+
+    .btn-secondary {
+      border: 1px solid #2f5d50;
+      color: #2f5d50;
+    }
+
+    .btn-secondary:hover {
+      background: #f3f7f5;
+    }
+
+
+    /* =========================
+       GENERAL SECTION
+    ========================= */
+
+    section {
+      padding: 90px 30px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #1e3d35;
+    }
+
+    .section-description {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 55px auto;
+      color: #666;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: #fafafa;
+    }
+
+    .about-text {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      font-size: 17px;
+    }
+
+
+    /* =========================
+       RESEARCH
+    ========================= */
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .research-card {
+      border: 1px solid #e5e5e5;
+      padding: 35px;
+      border-radius: 8px;
+      background: white;
+      transition: 0.2s;
+    }
+
+    .research-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+    }
+
+    .research-card h3 {
+      font-size: 21px;
+      color: #2f5d50;
+      margin-bottom: 12px;
+    }
+
+    .research-card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       PEOPLE
+    ========================= */
+
+    .people {
+      background: #fafafa;
+    }
+
+    .person-card {
+      display: flex;
+      align-items: center;
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      border: 1px solid #e5e5e5;
+      padding: 35px;
+      border-radius: 8px;
+    }
+
+    .person-photo {
+      width: 170px;
+      height: 210px;
+      background: #e8ecea;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 40px;
+      color: #888;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .person-info h3 {
+      font-size: 27px;
+      color: #1e3d35;
+    }
+
+    .person-info .position {
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .person-info p {
+      margin: 5px 0;
+    }
+
+
+    /* =========================
+       PUBLICATIONS
+    ========================= */
+
+    .publication-list {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .publication {
+      padding: 22px 0;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .publication-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .publication-info {
+      color: #666;
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: #1e3d35;
+      color: white;
+    }
+
+    .contact .section-title {
+      color: white;
+    }
+
+    .contact .section-description {
+      color: #d8e3df;
+    }
+
+    .contact-info {
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #152d27;
+      color: #bbb;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 768px) {
+
+      .navbar {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 12px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 13px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero .subtitle {
+        font-size: 19px;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .person-card {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .person-photo {
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+<header>
+  <div class="navbar">
+
+    <div class="logo">
+      <span>PRECISE</span> Lab
+    </div>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#people">People</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <h1>PRECISE Lab</h1>
+
+    <div class="subtitle">
+      Advancing Pharmacotherapy through Real-world Evidence
+    </div>
+
+    <div class="full-name">
+      <strong>P</strong>harmacotherapy &
+      <strong>R</strong>eal-world
+      <strong>E</strong>vidence for
+      <strong>C</strong>l<strong>I</strong>nical
+      <strong>S</strong>afety &
+      <strong>E</strong>fficacy
+    </div>
+
+    <div class="institution">
+      College of Pharmacy<br>
+      Gyeongsang National University
+    </div>
+
+    <div class="hero-buttons">
+      <a href="#research" class="btn btn-primary">Our Research</a>
+      <a href="#people" class="btn btn-secondary">Our People</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="about">
+
+  <div class="container">
+
+    <h2 class="section-title">About PRECISE Lab</h2>
+
+    <p class="section-description">
+      Pharmacotherapy & Real-world Evidence for Clinical Safety & Efficacy
     </p>
 
-    <h2>About Us</h2>
-    <p>
-        PRECISE Lab is a research laboratory at the College of Pharmacy,
-        Gyeongsang National University.
+    <div class="about-text">
+
+      <p>
+        The PRECISE Lab investigates the safety and effectiveness of
+        pharmacotherapy using real-world healthcare data.
+      </p>
+
+      <br>
+
+      <p>
+        Our research integrates clinical pharmacy, pharmacoepidemiology,
+        pharmacovigilance, and data science to generate evidence that supports
+        safer and more effective medication use in clinical practice.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     RESEARCH
+========================= -->
+
+<section id="research">
+
+  <div class="container">
+
+    <h2 class="section-title">Research</h2>
+
+    <p class="section-description">
+      Our research focuses on generating clinically meaningful evidence
+      from real-world healthcare data.
     </p>
 
-    <h2>Research</h2>
-    <ul>
-        <li>Pharmacotherapy</li>
-        <li>Real-world Evidence</li>
-        <li>Drug Safety</li>
-        <li>Clinical Effectiveness</li>
-    </ul>
+
+    <div class="research-grid">
+
+
+      <div class="research-card">
+        <h3>Real-world Evidence</h3>
+
+        <p>
+          Evaluation of treatment effectiveness and safety using
+          nationwide claims databases, electronic health records,
+          and other real-world healthcare data.
+        </p>
+      </div>
+
+
+      <div class="research-card">
+        <h3>Drug Safety & Pharmacovigilance</h3>
+
+        <p>
+          Detection and evaluation of adverse drug events using
+          spontaneous reporting systems and population-based databases.
+        </p>
+      </div>
+
+
+      <div class="research-card">
+        <h3>Clinical Pharmacotherapy</h3>
+
+        <p>
+          Investigation of clinically important questions related to
+          medication use, treatment strategies, and patient outcomes.
+        </p>
+      </div>
+
+
+      <div class="research-card">
+        <h3>Healthcare Data Science</h3>
+
+        <p>
+          Application of statistical methods, machine learning,
+          and data science approaches to healthcare and medication data.
+        </p>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PEOPLE
+========================= -->
+
+<section id="people" class="people">
+
+  <div class="container">
+
+    <h2 class="section-title">People</h2>
+
+    <p class="section-description">
+      Members of the PRECISE Lab
+    </p>
+
+
+    <div class="person-card">
+
+      <div class="person-photo">
+        PI Photo
+      </div>
+
+      <div class="person-info">
+
+        <h3>Seunghyun Cheon, PhD, RPh</h3>
+
+        <div class="position">
+          Assistant Professor
+        </div>
+
+        <p>
+          College of Pharmacy<br>
+          Gyeongsang National University
+        </p>
+
+        <p>
+          <strong>Research interests:</strong><br>
+          Pharmacotherapy, Real-world Evidence,
+          Drug Safety, Pharmacoepidemiology,
+          Healthcare Data Science
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PUBLICATIONS
+========================= -->
+
+<section id="publications">
+
+  <div class="container">
+
+    <h2 class="section-title">Selected Publications</h2>
+
+    <p class="section-description">
+      Selected research from the PRECISE Lab
+    </p>
+
+
+    <div class="publication-list">
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          Publication title will be added here.
+        </div>
+
+        <div class="publication-info">
+          Authors. Journal. Year.
+        </div>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          Publication title will be added here.
+        </div>
+
+        <div class="publication-info">
+          Authors. Journal. Year.
+        </div>
+
+      </div>
+
+
+      <div class="publication">
+
+        <div class="publication-title">
+          Publication title will be added here.
+        </div>
+
+        <div class="publication-info">
+          Authors. Journal. Year.
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+  <div class="container">
+
+    <h2 class="section-title">Contact</h2>
+
+    <p class="section-description">
+      PRECISE Lab
+    </p>
+
+
+    <div class="contact-info">
+
+      <p>
+        College of Pharmacy<br>
+        Gyeongsang National University
+      </p>
+
+      <p>
+        Jinju, Republic of Korea
+      </p>
+
+      <p>
+        Email: [your university email]
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  © 2026 PRECISE Lab.
+  Gyeongsang National University.
+
+</footer>
+
 
 </body>
 </html>
