@@ -380,7 +380,17 @@
   color: var(--text);
 }
 
+.publication-list {
+  counter-reset: publication;
+}
 
+.publication {
+  counter-increment: publication;
+}
+
+.pub-number::before {
+  content: counter(publication);
+}
     /* =============================
        PEOPLE
     ============================= */
@@ -1104,7 +1114,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">1</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1123,7 +1133,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">2</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1143,7 +1153,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">3</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1170,7 +1180,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">4</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1190,7 +1200,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">5</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1211,7 +1221,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">6</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1232,7 +1242,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">7</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1254,7 +1264,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">8</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1275,7 +1285,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">9</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1303,7 +1313,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">10</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1324,7 +1334,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">11</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1345,7 +1355,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">12</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1365,7 +1375,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">13</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1387,7 +1397,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">14</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1411,7 +1421,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">15</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1430,7 +1440,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">16</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1452,7 +1462,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">17</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1473,7 +1483,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">18</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1500,7 +1510,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">19</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1522,7 +1532,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">20</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1544,7 +1554,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">21</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1564,7 +1574,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">22</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1585,7 +1595,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">23</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1613,7 +1623,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">24</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1643,7 +1653,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">25</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
@@ -1665,7 +1675,7 @@
 
       <div class="publication">
 
-        <div class="pub-number">26</div>
+        <div class="pub-number"></div>
 
         <div>
           <div class="pub-title">
